@@ -1,0 +1,5 @@
+<app-post *ngFor="let post of posts" [post]="post" (surfacing)="getSurfacing($event)"></app-post>
+
+<h2>
+  <app-post [post]="onePost"></app-post>
+</h2>
