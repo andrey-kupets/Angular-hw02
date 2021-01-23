@@ -1,19 +1,17 @@
 import {Component, Input, OnInit, EventEmitter, Output} from '@angular/core';
 import {User} from '../../models/User';
 
-
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-
   @Input()
   user: User;
 
   @Output()
-  bubbleUp = new EventEmitter<User>();
+  surfacing = new EventEmitter<User>();
 
   constructor() { }
 
@@ -21,6 +19,6 @@ export class UserComponent implements OnInit {
   }
   getUserInfo(user: User): void {
     console.log(user);
-    this.bubbleUp.emit(user);
+    this.surfacing.emit(user);
   }
 }

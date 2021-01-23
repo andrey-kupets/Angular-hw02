@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {log} from 'util';
 import {User} from '../../models/User';
-import {UserService} from '../services/user.service';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-users',
@@ -10,17 +8,19 @@ import {UserService} from '../services/user.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  users: User[];
+
+  users: User;
 
   singleUser: User;
 
   constructor(private userService: UserService) {
-
   }
+
   ngOnInit(): void {
     this.userService.getUsers().subscribe(value => this.users = value);
   }
-  getBubble(user: User): void {
+
+  getSurfacing(user: User): void {
     this.singleUser = user;
   }
 
