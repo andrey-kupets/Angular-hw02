@@ -1,0 +1,4 @@
+<div *ngIf="comment.id <= 10">
+  {{comment?.id}} - {{comment?.name}}
+  <button (click)="getCommentInfo(comment)">details...</button>
+</div>

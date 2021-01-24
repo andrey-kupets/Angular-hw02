@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="post.title.includes('dolorem')">
   {{post?.id}} - {{post?.title}}
   <button (click)="getPostInfo(post)">details...</button>
 </div>

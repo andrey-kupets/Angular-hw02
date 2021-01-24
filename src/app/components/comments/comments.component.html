@@ -1,0 +1,6 @@
+<app-comment *ngFor="let comment of comments" [comment]="comment" (surfacing)="getSurfacing($event)"></app-comment>
+
+<h2>
+  {{singleComment?.id}} {{singleComment ? '-' : ''}}
+  {{singleComment?.body}}
+</h2>
