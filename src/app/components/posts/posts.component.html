@@ -1,8 +1,14 @@
 <app-post *ngFor="let post of posts" [post]="post" (surfacing)="getSurfacing($event)"></app-post>
-<h2>
-  {{singlePost?.id}} {{singlePost ? '-' : ''}}
-  {{singlePost?.body}}
+<h2 *ngIf="singlePost">
+  {{singlePost.id}} -
+  {{singlePost.body}}
 </h2>
+
+<!--<h2>-->
+<!--  {{singlePost?.id}} {{singlePost ? '-' : ''}}-->
+<!--  {{singlePost?.body}}-->
+<!--</h2>-->
+
 <!--<h2>-->
 <!--  <app-post [post]="singlePost"></app-post>-->
 <!--</h2>-->

@@ -1,12 +1,22 @@
 <app-user *ngFor="let user of users" [user]="user" (surfacing)="getSurfacing($event)"></app-user>
-<h2>
-  {{singleUser?.id}} {{singleUser ? '-' : ''}}
-  {{singleUser?.name}} {{singleUser ? '-' : ''}}
-  {{singleUser?.username}} {{singleUser ? '-' : ''}}
-  {{singleUser?.email}} {{singleUser ? '-' : ''}}
-  {{singleUser?.phone}} {{singleUser ? '-' : ''}}
-  {{singleUser?.address.city}}
+<h2 *ngIf="singleUser">
+  {{singleUser.id}} -
+  {{singleUser.name}} -
+  {{singleUser.username}} -
+  {{singleUser.email}} -
+  {{singleUser.phone}} -
+  {{singleUser.address.city}}
 </h2>
+
+<!--<h2>-->
+<!--  {{singleUser?.id}} {{singleUser ? '-' : ''}}-->
+<!--  {{singleUser?.name}} {{singleUser ? '-' : ''}}-->
+<!--  {{singleUser?.username}} {{singleUser ? '-' : ''}}-->
+<!--  {{singleUser?.email}} {{singleUser ? '-' : ''}}-->
+<!--  {{singleUser?.phone}} {{singleUser ? '-' : ''}}-->
+<!--  {{singleUser?.address.city}}-->
+<!--</h2>-->
+
 <!--<h2>-->
 <!--  <app-user [user]="singleUser"></app-user>-->
 <!--</h2>-->
